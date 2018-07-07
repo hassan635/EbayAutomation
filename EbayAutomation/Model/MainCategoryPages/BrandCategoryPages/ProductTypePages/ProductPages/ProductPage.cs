@@ -8,13 +8,13 @@ using EbayAutomation.Helpers;
 
 namespace EbayAutomation.Model
 {
-    public class ItemPage : BasePage, IProductPage
+    public class ProductPage : BasePage, IProductPage
     {
         private IWebDriver _driver;
 
         private IWebElement _buyNowButton => _driver.FindElement(By.Id("binBtn_btn"));
 
-        public ItemPage(IWebDriver driver)
+        public ProductPage(IWebDriver driver)
         {
             _driver = driver;
         }
@@ -25,10 +25,10 @@ namespace EbayAutomation.Model
             return this;
         }
 
-        public ICheckOutPage BuyProduct(string checkOutMethod)
+        public ICheckOutPage BuyProduct(Type checkOutMethodPage)
         {
             _buyNowButton.Click();
-            return (ICheckOutPage)DynamicPageFactory.Create(checkOutMethod);
+            return (ICheckOutPage)DynamicPageFactory.Create(checkOutMethodPage);
         }
 
     }

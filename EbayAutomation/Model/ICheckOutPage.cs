@@ -8,6 +8,6 @@ namespace EbayAutomation.Model
 {
     public interface ICheckOutPage
     {
-        BasePage PerformCheckout(string returnPageName);
+        BasePage PerformCheckout(Type returnPageName);
     }
 }

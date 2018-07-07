@@ -10,6 +10,6 @@ namespace EbayAutomation.Model
     {
         IProductPage Load();
 
-        ICheckOutPage BuyProduct(string checkoutMethod);
+        ICheckOutPage BuyProduct(Type checkoutMethodPage);
     }
 }

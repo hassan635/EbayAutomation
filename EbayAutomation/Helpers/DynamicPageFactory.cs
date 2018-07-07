@@ -10,9 +10,9 @@ namespace EbayAutomation.Helpers
 {
     public static class DynamicPageFactory
     {
-        public static BasePage Create(string className, params BasePage[] additionalDependencies)
+        public static BasePage Create(Type className, params BasePage[] additionalDependencies)
         {
-            var type = Type.GetType($"EbayAutomation.Model.{className}Page");
+            var type = Type.GetType($"EbayAutomation.Model.{className.Name}");
             BasePage instance = (BasePage)Activator.CreateInstance(type, new object[] { DriverFactory.GetCurrentDriver()}, additionalDependencies);
             return instance;
         }

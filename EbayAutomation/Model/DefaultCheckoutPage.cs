@@ -17,7 +17,7 @@ namespace EbayAutomation.Model
             _driver = driver;
         }
 
-        public BasePage PerformCheckout(string ReturnPageName)
+        public BasePage PerformCheckout(Type ReturnPageName)
         {
             //Add checkout logic here
             return DynamicPageFactory.Create(ReturnPageName);

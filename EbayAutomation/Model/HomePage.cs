@@ -14,6 +14,8 @@ namespace EbayAutomation.Model
         private IWebDriver _driver;
         private IReadOnlyCollection<IWebElement> _categoryLinks => _driver.FindElements(By.CssSelector("table[id=\"gh-sbc\"] > tbody > tr > td > ul > li > a"));
 
+        private IMainCategoryPage _categoryPage;
+
         public HomePage(IWebDriver driver)
         {
             _driver = driver;
@@ -26,17 +28,18 @@ namespace EbayAutomation.Model
         }
         
 
-        public IMainCategoryPage OpenCategoryMenuAndSelectCategory(string categoryName)
+        public IMainCategoryPage OpenCategoryMenuAndSelectCategory(Type categoryPageName)
         {
             //Using JS to manupilate display attribute
             //IJavaScriptExecutor executor = (IJavaScriptExecutor)_driver;
             //executor.ExecuteScript("document.getElementById('gh-sbc-o').style.display='block';‌​");
             _driver.Navigate().GoToUrl("https://www.ebay.com.au/b/Computers-Tablets-Network-Hardware/58058/bn_1843425");
 
+            _categoryPage = (IMainCategoryPage)categoryPageName;
 
             foreach (IWebElement category in _categoryLinks)
             {
-                if (category.Text == categoryName)
+                if (category.Text == _categoryPage.mainCategoryName)
                 {
                     category.Click();
                 }
@@ -45,7 +48,7 @@ namespace EbayAutomation.Model
                     continue;
                 }
             }
-            return (IMainCategoryPage)DynamicPageFactory.Create(categoryName);
+            return (IMainCategoryPage)DynamicPageFactory.Create(categoryPageName);
         }
     }
     

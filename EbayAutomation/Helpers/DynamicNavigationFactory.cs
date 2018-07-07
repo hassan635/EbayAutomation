@@ -9,9 +9,9 @@ namespace EbayAutomation.Helpers
 {
     public static class DynamicNavigationFactory
     {
-        public static INavigationValidator Create(string className)
+        public static INavigationValidator Create(Type className)
         {
-            var type = Type.GetType($"EbayAutomation.Model.{className}NavigationValidator");
+            var type = Type.GetType($"EbayAutomation.Model.{className.Name}");
             INavigationValidator instance = (INavigationValidator)Activator.CreateInstance(type, new object[] { DriverFactory.GetCurrentDriver() });
             return instance;
         }

@@ -9,6 +9,11 @@ namespace EbayAutomation.Model
     public interface IProductTypePage
     {
         IProductTypePage Load();
-        IProductPage SelectProduct(string productName);
+
+        string productTypeName
+        {
+            get;
+        }
+        IProductPage SelectProduct(Type productPage);
     }
 }

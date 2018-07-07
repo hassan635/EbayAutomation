@@ -13,6 +13,9 @@ namespace EbayAutomation.Model
         private IWebDriver _driver;
         private IReadOnlyCollection<IWebElement> _typeLinks => _driver.FindElements(By.CssSelector("div#w5-xCarousel-x-carousel-items > ul > li > a"));
 
+        private IProductTypePage _productType;
+        public string brandCategoryName => "HP";
+
         public HPPage(IWebDriver driver)
         {
             _driver = driver;
@@ -25,17 +28,18 @@ namespace EbayAutomation.Model
         }
 
 
-        public IProductTypePage SelectProductType(string typeName)
+        public IProductTypePage SelectProductType(Type typeName)
         {
             //Using JS to manupilate display attribute
             //IJavaScriptExecutor executor = (IJavaScriptExecutor)_driver;
             //executor.ExecuteScript("document.getElementById('gh-sbc-o').style.display='block';‌​");
             _driver.Navigate().GoToUrl("https://www.ebay.com.au/b/Computers-Tablets-Network-Hardware/58058/bn_1843425");
 
+            _productType = (IProductTypePage)typeName;
 
             foreach (IWebElement type in _typeLinks)
             {
-                if (type.Text == typeName)
+                if (type.Text == _productType.productTypeName)
                 {
                     type.Click();
                 }

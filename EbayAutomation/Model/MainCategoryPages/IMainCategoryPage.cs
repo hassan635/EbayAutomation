@@ -9,7 +9,12 @@ namespace EbayAutomation.Model
     public interface IMainCategoryPage
     {
         IMainCategoryPage Load();
-        IBrandCategoryPage SelectBrandCategory(string brandName);
+
+        string mainCategoryName
+        {
+            get;
+        }
+        IBrandCategoryPage SelectBrandCategory(Type brandNamePage);
 
     }
 }

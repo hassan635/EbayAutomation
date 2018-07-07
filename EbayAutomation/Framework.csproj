@@ -55,26 +55,23 @@
     <Compile Include="Helpers\HttpRequestDispatcher.cs" />
     <Compile Include="Model\BasePage.cs" />
     <Compile Include="Helpers\DynamicNavigationFactory.cs" />
-    <Compile Include="Model\IBrandCategoryPage.cs" />
+    <Compile Include="Model\MainCategoryPages\BrandCategoryPages\IBrandCategoryPage.cs" />
     <Compile Include="Model\DefaultCheckoutPage.cs" />
-    <Compile Include="Model\ComputerAndTabletsPage.cs" />
-    <Compile Include="Model\HPPage.cs" />
+    <Compile Include="Model\MainCategoryPages\BrandCategoryPages\HPPage.cs" />
     <Compile Include="Model\ICheckOutPage.cs" />
     <Compile Include="Model\INavigationValidator.cs" />
-    <Compile Include="Model\ItemPage.cs" />
-    <Compile Include="DriverFactory.cs" />
+    <Compile Include="Model\MainCategoryPages\BrandCategoryPages\ProductTypePages\ProductPages\ProductPage.cs" />
+    <Compile Include="Helpers\DriverFactory.cs" />
     <Compile Include="Helpers\WaitFor.cs" />
     <Compile Include="Model\HomePage.cs" />
-    <Compile Include="Model\IMainCategoryPage.cs" />
-    <Compile Include="Model\PageFactory.cs" />
-    <Compile Include="Model\PCLaptopsNotebooksPage.cs" />
-    <Compile Include="Model\IProductPage.cs" />
-    <Compile Include="Model\IProductTypePage.cs" />
+    <Compile Include="Model\MainCategoryPages\IMainCategoryPage.cs" />
+    <Compile Include="Model\MainCategoryPages\PCLaptopsNotebooksPage.cs" />
+    <Compile Include="Model\MainCategoryPages\BrandCategoryPages\ProductTypePages\ProductPages\IProductPage.cs" />
+    <Compile Include="Model\MainCategoryPages\BrandCategoryPages\ProductTypePages\IProductTypePage.cs" />
     <Compile Include="Model\SignInPage.cs" />
     <Compile Include="Model\TopNavigationValidator.cs" />
-    <Compile Include="Model\UltrabookPage.cs" />
+    <Compile Include="Model\MainCategoryPages\BrandCategoryPages\ProductTypePages\UltrabookPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\SimpleSearch.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

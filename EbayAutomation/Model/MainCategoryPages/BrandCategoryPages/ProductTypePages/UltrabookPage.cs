@@ -14,6 +14,10 @@ namespace EbayAutomation.Model
 
         IWebElement _firstListingLinks => _driver.FindElement(By.CssSelector("li#w7-items[0] > div > div.s-item__info clearfix > a"));
 
+        private IProductPage _product;
+
+        public string productTypeName => "Ultrabook";
+
         public UltrabookPage(IWebDriver driver)
         {
             _driver = driver;
@@ -25,16 +29,16 @@ namespace EbayAutomation.Model
             return this;
         }
 
-        public IProductPage SelectProduct(string productName)
+        public IProductPage SelectProduct(Type productPage)
         {
             _firstListingLinks.Click();
-            return (IProductPage)DynamicPageFactory.Create(productName);
+            return (IProductPage)DynamicPageFactory.Create(productPage);
         }
 
         public BasePage SelectFirstListing()
         {
             _firstListingLinks.Click();
-            return DynamicPageFactory.Create("Item");
+            return DynamicPageFactory.Create(typeof(ProductPage));
         }
     }
 }
