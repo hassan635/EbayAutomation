@@ -1,0 +1,8 @@
+c:\users\tariqh\documents\visual studio 2017\Projects\EbayAutomation\EbayAutomation\bin\Debug\EbayAutomation.dll
+c:\users\tariqh\documents\visual studio 2017\Projects\EbayAutomation\EbayAutomation\bin\Debug\EbayAutomation.pdb
+c:\users\tariqh\documents\visual studio 2017\Projects\EbayAutomation\EbayAutomation\bin\Debug\WebDriver.dll
+c:\users\tariqh\documents\visual studio 2017\Projects\EbayAutomation\EbayAutomation\bin\Debug\WebDriver.Support.dll
+c:\users\tariqh\documents\visual studio 2017\Projects\EbayAutomation\EbayAutomation\bin\Debug\WebDriver.xml
+c:\users\tariqh\documents\visual studio 2017\Projects\EbayAutomation\EbayAutomation\bin\Debug\WebDriver.Support.xml
+c:\users\tariqh\documents\visual studio 2017\Projects\EbayAutomation\EbayAutomation\obj\Debug\EbayAutomation.dll
+c:\users\tariqh\documents\visual studio 2017\Projects\EbayAutomation\EbayAutomation\obj\Debug\EbayAutomation.pdb
