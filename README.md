@@ -4,13 +4,13 @@ To assess the design of the automation framework for web application, I usally s
 
 Going through the steps for the given user story, I observed that, generally, the ebay shop and checkout process has a certain pattern to the way a typical user will perform the steps. For example, if someone wants to buy an Ultrabook from ebay, they will follow these steps:
 
-Step#1: Log-in to ebay.
-Step#2: From the Home page, they'll select one of the main categories(in this case Laptops & Notebooks) of a product.
-Step#3: Then they'll select a brand from the top 5 that are displayed.
-Step#4: They'll select a particular type of the product that the brand offers(in this case an Ultrabook).
-Step#5: On the selected product type page, a list of available products will be present. They'll select one of the listings.
-Step#6: On the product's page, they'll will press the Buy Now button which takes them to the checkout page.
-Step#7: On the checkout page, they'll review their order and pay.
+- Step#1: Log-in to ebay.
+- Step#2: From the Home page, they'll select one of the main categories(in this case Laptops & Notebooks) of a product.
+- Step#3: Then they'll select a brand from the top 5 that are displayed.
+- Step#4: They'll select a particular type of the product that the brand offers(in this case an Ultrabook).
+- Step#5: On the selected product type page, a list of available products will be present. They'll select one of the listings.
+- Step#6: On the product's page, they'll will press the Buy Now button which takes them to the checkout page.
+- Step#7: On the checkout page, they'll review their order and pay.
 
 Based on the steps above, a generic pattern of user behaviour can be implemented in the automation framework which is:
 
