@@ -30,11 +30,6 @@ namespace EbayAutomation.Model
 
         public IProductTypePage SelectProductType(Type typeName)
         {
-            //Using JS to manupilate display attribute
-            //IJavaScriptExecutor executor = (IJavaScriptExecutor)_driver;
-            //executor.ExecuteScript("document.getElementById('gh-sbc-o').style.display='block';‌​");
-            _driver.Navigate().GoToUrl("https://www.ebay.com.au/b/Computers-Tablets-Network-Hardware/58058/bn_1843425");
-
             _productType = (IProductTypePage)typeName;
 
             foreach (IWebElement type in _typeLinks)

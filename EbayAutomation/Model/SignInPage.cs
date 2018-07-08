@@ -31,7 +31,7 @@ namespace EbayAutomation.Model
             _username.SendKeys(Username);
             _password.SendKeys(Password);
             _signInButton.Click();
-            return DynamicPageFactory.Create("Home");
+            return DynamicPageFactory.Create(typeof(HomePage));
         }
 
     }

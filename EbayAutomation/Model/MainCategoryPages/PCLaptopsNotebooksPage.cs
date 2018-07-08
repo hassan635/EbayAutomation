@@ -30,11 +30,6 @@ namespace EbayAutomation.Model
 
         public IBrandCategoryPage SelectBrandCategory(Type brandNamePage)
         {
-            //Using JS to manupilate display attribute
-            //IJavaScriptExecutor executor = (IJavaScriptExecutor)_driver;
-            //executor.ExecuteScript("document.getElementById('gh-sbc-o').style.display='block';‌​");
-            _driver.Navigate().GoToUrl("https://www.ebay.com.au/b/Computers-Tablets-Network-Hardware/58058/bn_1843425");
-
             _brandCategory = (IBrandCategoryPage)brandNamePage;
 
             foreach (IWebElement brand in _brandLinks)
